@@ -1,15 +1,8 @@
 #include "spi_ili9341.h"
-
 #include <stdio.h>
 #include <stdlib.h>
 
 
-#include "spi_ili9341.h"
-#include "font24.c"
-#include "font20.c"
-#include "font16.c"
-#include "font12.c"
-//#include "font8.c"
 //-------------------------------------------------------------------
 
 //extern RNG_HandleTypeDef hrng;

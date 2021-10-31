@@ -24,6 +24,14 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "spi_ili9341.h"
+#include "win11_background_1.h"
+#include "win11_background_2.h"
+
+#include "jihad.h"
+#include "mypic.h"
+#include "tehranuni.h"
+#include "hajghasem.h"
 
 /* USER CODE END Includes */
 
@@ -50,7 +58,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+//extern const uint8_t win11_image2[];
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -88,13 +96,21 @@ int main(void)
   MX_GPIO_Init();
   MX_SPI2_Init();
   /* USER CODE BEGIN 2 */
-
+	ili9341_init(240,320);
   /* USER CODE END 2 */
-
+	
+	
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	ili9341_show_picture(320,240,(uint8_t *)jihad);
+		HAL_Delay(5000);
+	//ili9341_show_picture(320,240,(uint8_t *)mypic);
+	ili9341_show_picture(320,240,(uint8_t *)win11_image2);
+		HAL_Delay(5000);
+	ili9341_show_picture(320,240,(uint8_t *)ghasem_solaymani);
+		HAL_Delay(5000);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

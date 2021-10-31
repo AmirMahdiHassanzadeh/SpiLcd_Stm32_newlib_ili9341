@@ -1,3 +1,4 @@
+#include <stdint.h>
 const uint8_t win11_image1[]=
 {
 0xCE,0x79,0xCE,0x79,
